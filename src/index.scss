@@ -67,9 +67,114 @@ body {
       place-items: center;
       padding: 0px 5px;
       cursor: pointer;
+      transition: 0.5s ease;
+      &:hover{
+        background-color: $cyan-500;
+        color: #fff;
+      }
     }
   }
   .filterClearBtn {
     cursor: pointer;
+  }
+}
+
+.job-list {
+  padding: 50px 0px;
+}
+.jobCard {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  cursor: pointer;
+  .companyLogo {
+    margin-top: -50px;
+
+    img {
+      width: 50px;
+    }
+  }
+}
+
+.listingInfo{
+  display: grid;
+  grid-template-row: repeat(3,1fr);
+  border-bottom: 1px solid $cyan-300;
+  h2{
+    color: $cyan-500;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .listingTitle{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    h3{
+      color: $cyan-800;
+      font-size: 16px;
+    }
+    .new{
+      background: $cyan-800;
+      color: #fff;
+      border-radius: 30px;
+      padding: 3px 10px;
+      font-size: 12px;
+    }
+    .featured{
+      background: $cyan-500;
+      color: #fff;
+      border-radius: 30px;
+      padding: 3px 10px;
+      font-size: 12px;
+
+    }
+  }
+  .listingMeta{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.listingTags{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0px;
+  flex-wrap: wrap;
+  span{
+    background: $cyan-100;
+    color: $cyan-800;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover{
+      background-color: $cyan-800;
+      color: #fff;
+    }
+  }
+ 
+}
+
+@media screen and (min-width: 768px) {
+  .listingInfo{
+    border-bottom: none;
+  }
+  .jobCard{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .companyLogo{
+    margin-top: 0px !important;
+    img {
+      width: 70px !important;
+    }
+  }
+  .listingInfo{
+    flex: 1;
   }
 }
